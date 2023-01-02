@@ -276,13 +276,15 @@ Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
 function fenomenGonderimSayisi(feno,profil){
 let a=[];
   for (let i = 0; i < feno.length; i++) {
-   if( profil=feno[i].profile ){
+   if( profil==feno[i].profile ){
      a= feno[i].posts;
    }
     
   }return a;
 
-}console.log(fenomenGonderimSayisi(fenomenler,'Instagram'));
+}
+console.clear();
+console.log(fenomenGonderimSayisi(fenomenler,'Instagram'));
 
 
 
@@ -301,29 +303,18 @@ function platformaGoreCokGonderiYapanFenomen(feno,platfor){
   let a=[];
   let b=[];
   for (let i = 0; i < feno.length; i++) {
-    
     if(feno[i].platform==platfor && feno[i].posts != 'NA'){
-      
-    
         a.push(feno[i].posts);
-        
-            
     }
-     
   }
   a.sort(function(a, b){return b - a});
-  
 for (let i = 0; i < feno.length; i++) {
-  
   if(feno[i].posts==a[0]){
-    
     b.push(feno[i].profile);
   }  
 }
-  
   return b[0];
 }
-
 console.log(platformaGoreCokGonderiYapanFenomen(fenomenler,'TikTok'));
 
 
