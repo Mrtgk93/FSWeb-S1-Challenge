@@ -158,8 +158,8 @@ Aşağıdakileri konsolda gösterim (console.log) işlemi gerçekleştirerek, yu
 (işlev yazmanıza gerek yok)
 Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın. */
 
-
-
+fenomenler[6].profile = "Justin Bieber";
+console.log(fenomenler[6].profile);
 
 /*  Görev 3:
 Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
@@ -206,8 +206,8 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
 function fenomenSil(feno,x) {
-  let b=(feno);
-  // let b=feno.slice();
+  
+   let b=feno.slice();
     b.splice(x,1);
   
   return b; 
